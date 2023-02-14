@@ -40,13 +40,15 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  /* background-image: url(Images/metalsheet.jpg);
-  background-size: cover; */
+  background-image: url(Images/metalsheet.jpg);
+  background-size: cover;
 }
 #game_elements {
   width: 100%;
   height: 100%;
   position: absolute;
+  top: 0%;
+  left: 0%;
   /* background-color: rgba(255, 0, 0, 0.25); */
 }
 #game_ui {
@@ -55,20 +57,50 @@
 
 /* Spil-elementer */
 
-/* #greenbutton_container {
-  background-color: green;
+#greenbuttonOFF_container1 {
+  scale: 0.03 0.03;
+  position: absolute;
+  top: -50%;
+  left: -40%;
+}
+#greenbuttonOFF_container2 {
+  scale: 0.03 0.03;
+  position: absolute;
+  top: -60%;
+  left: -40%;
+}
+#greenbuttonOFF_container3 {
+  scale: 0.03 0.03;
+  position: absolute;
+  top: -70%;
+  left: -40%;
 }
 
-#redbutton_container {
-  background-color: red;
-} */
+#redbuttonOFF_container1 {
+  scale: 0.03 0.03;
+  position: absolute;
+  top: -50%;
+  left: -10%;
+}
+#redbuttonOFF_container2 {
+  scale: 0.03 0.03;
+  position: absolute;
+  top: -60%;
+  left: -10%;
+}
+#redbuttonOFF_container3 {
+  scale: 0.03 0.03;
+  position: absolute;
+  top: -70%;
+  left: -10%;
+}
 
 /* ui-elemtenter */
 
-#scoreboard {
+/* #scoreboard {
   background-color: yellow;
 }
-/* #life_board {
+#life_board {
   background-color: yellow;
 }
 #time_board {
