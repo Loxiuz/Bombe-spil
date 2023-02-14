@@ -1,0 +1,76 @@
+#screen {
+  outline: 1px solid orange;
+  background-color: rgba(255, 0, 0, 0.25);
+  position: relative;
+  aspect-ratio: 16/9;
+  display: grid;
+}
+.hidden {
+  visibility: hidden;
+}
+#game {
+  outline: 1px solid orange;
+  background-color: rgba(255, 0, 0, 0.25);
+  /* position: absolute; */
+  grid-row: 1;
+  grid-column: 1;
+}
+#start {
+  outline: 1px solid orange;
+  background-color: rgba(255, 0, 0, 0.25);
+  position: absolute;
+  grid-row: 1;
+  grid-column: 1;
+}
+#game_over {
+  outline: 1px solid orange;
+  background-color: rgba(255, 0, 0, 0.25);
+  position: absolute;
+  grid-row: 1;
+  grid-column: 1;
+}
+#level_complete {
+  outline: 1px solid orange;
+  background-color: rgba(255, 0, 0, 0.25);
+  position: absolute;
+  grid-row: 1;
+  grid-column: 1;
+}
+#game_background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  /* background-image: url(Images/metalsheet.jpg);
+  background-size: cover; */
+}
+#game_elements {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  /* background-color: rgba(255, 0, 0, 0.25); */
+}
+#game_ui {
+  display: grid;
+}
+
+/* Spil-elementer */
+
+/* #greenbutton_container {
+  background-color: green;
+}
+
+#redbutton_container {
+  background-color: red;
+} */
+
+/* ui-elemtenter */
+
+#scoreboard {
+  background-color: yellow;
+}
+/* #life_board {
+  background-color: yellow;
+}
+#time_board {
+  background-color: yellow;
+} */
