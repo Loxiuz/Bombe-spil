@@ -42,6 +42,7 @@
   position: absolute;
   background-image: url(Images/metalsheet.jpg);
   background-size: cover;
+  transform: scaleX(-1);
 }
 #game_elements {
   width: 100%;
@@ -61,38 +62,38 @@
   scale: 0.03 0.03;
   position: absolute;
   top: -50%;
-  left: -40%;
+  left: -5%;
 }
 #greenbuttonOFF_container2 {
   scale: 0.03 0.03;
   position: absolute;
   top: -60%;
-  left: -40%;
+  left: -5%;
 }
 #greenbuttonOFF_container3 {
   scale: 0.03 0.03;
   position: absolute;
   top: -70%;
-  left: -40%;
+  left: -5%;
 }
 
 #redbuttonOFF_container1 {
   scale: 0.03 0.03;
   position: absolute;
   top: -50%;
-  left: -10%;
+  left: 25%;
 }
 #redbuttonOFF_container2 {
   scale: 0.03 0.03;
   position: absolute;
   top: -60%;
-  left: -10%;
+  left: 25%;
 }
 #redbuttonOFF_container3 {
   scale: 0.03 0.03;
   position: absolute;
   top: -70%;
-  left: -10%;
+  left: 25%;
 }
 
 /* ui-elemtenter */
