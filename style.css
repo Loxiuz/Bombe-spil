@@ -101,25 +101,25 @@
 }
 #scoreboard {
   background-color: black;
-  border: solid grey 5px;
-  height: 10%;
-  width: 13%;
-  position: absolute;
-  top: 10%;
-  left: 28%;
-}
-#life_board {
-  background-color: black;
-  border: solid grey 5px;
+  border: solid rgb(111, 17, 17) 5px;
   height: 10%;
   width: 13%;
   position: absolute;
   top: 10%;
   left: 8.5%;
 }
+#life_board {
+  background-color: black;
+  border: solid rgb(111, 17, 17) 5px;
+  height: 10%;
+  width: 13%;
+  position: absolute;
+  top: 10%;
+  left: 28%;
+}
 #time_board {
   background-color: black;
-  border: solid grey 5px;
+  border: solid rgb(111, 17, 17) 5px;
   height: 10%;
   width: 13%;
   position: absolute;
