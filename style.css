@@ -102,6 +102,7 @@
 #scoreboard {
   background-color: black;
   border: solid rgb(111, 17, 17) 5px;
+  border-radius: 35px;
   height: 10%;
   width: 13%;
   position: absolute;
@@ -111,6 +112,7 @@
 #life_board {
   background-color: black;
   border: solid rgb(111, 17, 17) 5px;
+  border-radius: 35px;
   height: 10%;
   width: 13%;
   position: absolute;
@@ -120,6 +122,7 @@
 #time_board {
   background-color: black;
   border: solid rgb(111, 17, 17) 5px;
+  border-radius: 35px;
   height: 10%;
   width: 13%;
   position: absolute;
