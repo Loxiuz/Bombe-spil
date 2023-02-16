@@ -9,28 +9,20 @@
   visibility: hidden;
 }
 #game {
-  outline: 1px solid orange;
-  background-color: rgba(255, 0, 0, 0.25);
   grid-row: 1;
   grid-column: 1;
 }
 #start {
-  outline: 1px solid orange;
-  background-color: rgba(255, 0, 0, 0.25);
   position: absolute;
   grid-row: 1;
   grid-column: 1;
 }
 #game_over {
-  outline: 1px solid orange;
-  background-color: rgba(255, 0, 0, 0.25);
   position: absolute;
   grid-row: 1;
   grid-column: 1;
 }
 #level_complete {
-  outline: 1px solid orange;
-  background-color: rgba(255, 0, 0, 0.25);
   position: absolute;
   grid-row: 1;
   grid-column: 1;
@@ -47,8 +39,6 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 0%;
-  left: 0%;
   /* background-color: rgba(255, 0, 0, 0.25); */
 }
 
@@ -77,19 +67,19 @@
   scale: 0.03 0.03;
   position: absolute;
   top: -40%;
-  left: -20%;
+  left: -10%;
 }
 #redbuttonOFF_container2 {
   scale: 0.03 0.03;
   position: absolute;
   top: -30%;
-  left: -20%;
+  left: -10%;
 }
 #redbuttonOFF_container3 {
   scale: 0.03 0.03;
   position: absolute;
   top: -20%;
-  left: -20%;
+  left: -10%;
 }
 
 /* ui-elemtenter */
