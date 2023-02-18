@@ -44,66 +44,41 @@ body {
 }
 
 /* Spil-elementer */
-
 #greenbuttonOFF_container1 {
   scale: 0.1 0.1;
   position: absolute;
-  top: 20%;
-  left: -5%;
+  top: 0%;
+  left: -10%;
 }
 #greenbuttonOFF_container2 {
   scale: 0.1 0.1;
   position: absolute;
-  top: 30%;
-  left: -5%;
+  top: 0%;
+  left: 10%;
 }
 #greenbuttonOFF_container3 {
   scale: 0.1 0.1;
   position: absolute;
-  top: 40%;
-  left: -5%;
-}
-#greenbuttonOFF_container4 {
-  scale: 0.1 0.1;
-  position: absolute;
-  top: 25%;
-  left: 0%;
-}
-#greenbuttonOFF_container5 {
-  scale: 0.1 0.1;
-  position: absolute;
-  top: 35%;
-  left: 0%;
+  top: 0%;
+  left: 30%;
 }
 
 #redbuttonOFF_container1 {
   scale: 0.1 0.1;
   position: absolute;
-  top: 20%;
-  left: 20%;
+  top: 0%;
+  left: 0%;
 }
 #redbuttonOFF_container2 {
   scale: 0.1 0.1;
   position: absolute;
-  top: 30%;
-  left: 20%;
+  top: 0%;
+  left: 25%;
 }
 #redbuttonOFF_container3 {
   scale: 0.1 0.1;
   position: absolute;
-  top: 40%;
-  left: 20%;
-}
-#redbuttonOFF_container4 {
-  scale: 0.1 0.1;
-  position: absolute;
-  top: 25%;
-  left: 15%;
-}
-#redbuttonOFF_container5 {
-  scale: 0.1 0.1;
-  position: absolute;
-  top: 35%;
+  top: 0%;
   left: 15%;
 }
 
@@ -144,5 +119,3 @@ body {
   top: 10%;
   left: 48%;
 }
-
-/* Animationer */
