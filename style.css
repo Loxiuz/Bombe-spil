@@ -83,24 +83,41 @@ body {
   position: relative;
 }
 /* #scoreboard {
-}
-#life_board {
 } */
+#life_board {
+  transform: scale(0.3);
+  position: absolute;
+  left: 30%;
+  top: -20%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10%;
+}
+#indicator_red1,
+#indicator_red2,
+#indicator_red3 {
+  position: relative;
+  left: 21%;
+  top: -160%;
+}
+
 #time_board {
   transform: scale(0.3);
-  position: relative;
+  position: absolute;
   top: 3%;
   left: -30%;
 }
 #slider {
   transform: scale(0.66, 0.5);
+  filter: grayscale();
   position: absolute;
   overflow: hidden;
   left: -20%;
   top: 19.5%;
 }
-/*  */
-.rise_and_fade {
+/* Animationer */
+
+.rising {
   animation-name: rising;
   animation-duration: 1.8s;
   animation-timing-function: linear;
@@ -110,9 +127,28 @@ body {
 .squeeze {
   animation-name: squeeze;
   animation-duration: 3s;
+  animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
+#indicator_red1 {
+  animation-name: brighter;
+  animation-duration: 2s;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
+}
+#indicator_red2 {
+  animation-name: brighter;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+#indicator_red3 {
+  animation-name: brighter;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
 @keyframes rising {
   0% {
     transform: translate(0, 1500%);
@@ -129,5 +165,10 @@ body {
 @keyframes squeeze {
   100% {
     transform: scale(0, 0.5);
+  }
+}
+@keyframes brighter {
+  100% {
+    filter: brightness(8);
   }
 }
