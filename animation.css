@@ -6,7 +6,7 @@
 }
 @keyframes rising {
   0% {
-    transform: translate(0, 850%);
+    transform: translate(0, 1500%);
   }
   75% {
     opacity: 100;
@@ -15,7 +15,7 @@
     opacity: 0;
   }
   100% {
-    transform: translate(0, 0);
+    transform: translate(0, 10%);
     opacity: 0;
   }
 }
