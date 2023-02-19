@@ -125,27 +125,27 @@ body {
   animation-direction: alternate;
 }
 #greenbuttonOFF_sprite1 {
-  animation: brighter_and_fade;
+  animation: brighter_and_fade_out;
   animation-duration: 2s;
   animation-delay: 1.5s;
 }
 #greenbuttonOFF_sprite2 {
-  animation: brighter_and_fade;
+  animation: brighter_and_fade_out;
   animation-duration: 2s;
   animation-delay: 1.5s;
 }
 #greenbuttonOFF_sprite3 {
-  animation: brighter_and_fade;
+  animation: brighter_and_fade_out;
   animation-duration: 2s;
   animation-delay: 1.5s;
 }
 #redbuttonOFF_sprite1 {
-  animation: brighter_and_fade;
+  animation: brighter_and_fade_out;
   animation-duration: 2s;
   animation-delay: 1.5s;
 }
 #redbuttonOFF_sprite2 {
-  animation: brighter_and_fade;
+  animation: brighter_and_fade_out;
   animation-duration: 2s;
   animation-delay: 1.5s;
 }
