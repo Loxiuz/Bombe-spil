@@ -202,7 +202,7 @@ body {
     filter: brightness(8);
   }
 }
-@keyframes brighter_and_fade {
+@keyframes brighter_and_fade_out {
   50% {
     filter: brightness(20);
   }
