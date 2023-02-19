@@ -150,7 +150,7 @@ body {
   animation-delay: 1.5s;
 }
 #redbuttonOFF_sprite3 {
-  animation: brighter_and_fade;
+  animation: brighter_and_fade_out;
   animation-duration: 2s;
   animation-delay: 1.5s;
 }
