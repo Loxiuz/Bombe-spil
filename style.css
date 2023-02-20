@@ -9,6 +9,7 @@ body {
 .hidden {
   visibility: hidden;
 }
+/* Skalering af elementerne i forhold til vinduet skal fixes */
 #game {
   grid-row: 1;
   grid-column: 1;
