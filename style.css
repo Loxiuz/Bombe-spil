@@ -10,6 +10,9 @@ body {
   visibility: hidden;
 }
 /* Skalering af elementerne i forhold til vinduet skal fixes */
+img {
+  width: 100%;
+}
 #game {
   grid-row: 1;
   grid-column: 1;
@@ -90,14 +93,16 @@ body {
 #scoreboard {
   position: absolute;
   filter: brightness(1.5);
+  width: 20%;
   top: 45%;
   left: 2%;
 }
 #life_board {
   transform: scale(0.3);
   position: absolute;
-  left: 30%;
-  top: -20%;
+  width: 100%;
+  left: 25%;
+  top: -15%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 10%;
@@ -106,6 +111,7 @@ body {
 #indicator_red2,
 #indicator_red3 {
   position: relative;
+  width: 55%;
   left: 21%;
   top: -160%;
 }
@@ -113,16 +119,17 @@ body {
 #time_board {
   transform: scale(0.4);
   position: absolute;
-  top: 3%;
-  left: -30%;
+  width: 100%;
+  top: 5%;
+  left: -20%;
 }
 #slider {
-  transform: scale(0.66, 0.5);
+  transform: scale(0.93, 0.8);
   filter: brightness(1.5);
   position: absolute;
   overflow: hidden;
-  left: -20%;
-  top: 19.5%;
+  left: 0%;
+  top: 25%;
 }
 /* Animationer */
 
@@ -138,13 +145,13 @@ body {
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
-.squeeze {
+/* .squeeze {
   animation-name: squeeze;
   animation-duration: 3s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-}
+} */
 #indicator_red1 {
   animation-name: brighter1;
   animation-duration: 2s;
