@@ -2,7 +2,7 @@
 
 window.addEventListener("load", start);
 
-let activeLights = 3;
+let lightsOFF = 3;
 let points = 0;
 
 function start() {
@@ -62,11 +62,11 @@ function redButtonReset() {
 function lightNextIndicator() {
   console.log("lightNextIndicator");
   updateIndicators();
-  activeLights--;
+  lightsOFF--;
 }
 function updateIndicators() {
   console.log("updateIndicators");
   document
-    .querySelector("#indicator_red" + activeLights)
+    .querySelector("#indicator_red" + lightsOFF)
     .classList.add("brighter");
 }
