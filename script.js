@@ -34,6 +34,12 @@ function removeAnimations() {
   console.log("Removed animations and event listeners");
   document.querySelector("#greenButton1_container").classList.remove("rising");
   document.querySelector("#redButton1_container").classList.remove("rising");
+  document
+    .querySelector("#greenButton1_container")
+    .removeEventListener("click", greenbuttonClick);
+  document
+    .querySelector("#redButton1_container")
+    .removeEventListener("click", redbuttonClick);
 }
 
 function addPoint() {
