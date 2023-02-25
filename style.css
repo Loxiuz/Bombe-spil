@@ -15,6 +15,7 @@ img {
 #game {
   grid-row: 1;
   grid-column: 1;
+  overflow: hidden;
 }
 #start {
   position: absolute;
@@ -29,6 +30,7 @@ img {
 #game_over_text {
   position: relative;
   text-align: center;
+  top: 10%;
 }
 #level_complete {
   position: absolute;
@@ -38,6 +40,7 @@ img {
 #level_complete_text {
   position: relative;
   text-align: center;
+  top: 10%;
 }
 #game_background {
   width: 100%;
