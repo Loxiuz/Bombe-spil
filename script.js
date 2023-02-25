@@ -2,7 +2,7 @@
 
 window.addEventListener("load", start);
 
-let lightsOFF = 3;
+let indicatorsOff = 3;
 let points = 0;
 
 function start() {
@@ -13,10 +13,10 @@ function start() {
 
   document
     .querySelector("#greenButton1_container")
-    .addEventListener("click", greenbuttonClick);
+    .addEventListener("click", greenButtonClick);
   document
     .querySelector("#redButton1_container")
-    .addEventListener("click", redbuttonClick);
+    .addEventListener("click", redButtonClick);
 }
 
 function gameOver() {
@@ -36,16 +36,27 @@ function removeAnimations() {
   document.querySelector("#redButton1_container").classList.remove("rising");
   document
     .querySelector("#greenButton1_container")
-    .removeEventListener("click", greenbuttonClick);
+    .removeEventListener("click", greenButtonClick);
   document
     .querySelector("#redButton1_container")
-    .removeEventListener("click", redbuttonClick);
+    .removeEventListener("click", redButtonClick);
+  document
+    .querySelector("#greenButton1_container")
+    .removeEventListener("animationend", greenButtonReset);
+  document
+    .querySelector("#redButton1_container")
+    .removeEventListener("animationend", redButtonReset);
+  document.querySelector("#game_elements").classList.add("hidden");
+  document.querySelector("#game_ui").classList.add("hidden");
 }
 
 function addPoint() {
   console.log("addPoint");
   points++;
   updatePoints();
+  if (points == 3) {
+    levelComplete();
+  }
 }
 function updatePoints() {
   console.log("updatePoints");
@@ -55,20 +66,23 @@ function updatePoints() {
 function lightNextIndicator() {
   console.log("lightNextIndicator");
   updateIndicators();
-  lightsOFF--;
+  indicatorsOff--;
+  if (indicatorsOff == 0) {
+    gameOver();
+  }
 }
 function updateIndicators() {
   console.log("updateIndicators");
   document
-    .querySelector("#indicator_red" + lightsOFF)
+    .querySelector("#indicator_red" + indicatorsOff)
     .classList.add("brighter");
 }
 
-function greenbuttonClick() {
+function greenButtonClick() {
   console.log("greenbuttonClick");
   document
     .querySelector("#greenButton1_container")
-    .removeEventListener("click", greenbuttonClick);
+    .removeEventListener("click", greenButtonClick);
   document.querySelector("#greenButton1_container").classList.add("paused");
   document.querySelector("#greenButton1_sprite").classList.add("fade_out");
   document
@@ -85,14 +99,14 @@ function greenButtonReset() {
   document.querySelector("#greenButton1_container").classList.add("rising");
   document
     .querySelector("#greenButton1_container")
-    .addEventListener("click", greenbuttonClick);
+    .addEventListener("click", greenButtonClick);
 }
 
-function redbuttonClick() {
+function redButtonClick() {
   console.log("redbutton1PauseAndFadeOut");
   document
     .querySelector("#redButton1_container")
-    .removeEventListener("click", redbuttonClick);
+    .removeEventListener("click", redButtonClick);
   document.querySelector("#redButton1_container").classList.add("paused");
   document.querySelector("#redButton1_sprite").classList.add("fade_out");
   document
@@ -109,5 +123,5 @@ function redButtonReset() {
   document.querySelector("#redButton1_container").classList.add("rising");
   document
     .querySelector("#redButton1_container")
-    .addEventListener("click", redbuttonClick);
+    .addEventListener("click", redButtonClick);
 }

@@ -9,7 +9,6 @@ body {
 .hidden {
   visibility: hidden;
 }
-/* Skalering af elementerne i forhold til vinduet skal fixes */
 img {
   width: 100%;
 }
@@ -24,13 +23,21 @@ img {
 }
 #game_over {
   position: absolute;
-  grid-row: 1;
-  grid-column: 1;
+  height: 100%;
+  width: 100%;
+}
+#game_over_text {
+  position: relative;
+  text-align: center;
 }
 #level_complete {
   position: absolute;
-  grid-row: 1;
-  grid-column: 1;
+  height: 100%;
+  width: 100%;
+}
+#level_complete_text {
+  position: relative;
+  text-align: center;
 }
 #game_background {
   width: 100%;
@@ -95,12 +102,12 @@ img {
   left: 2%;
 }
 #counter {
-  position: absolute;
+  position: relative;
   color: white;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 12vw;
-  left: 6.5vw;
-  top: -9vw;
+  text-align: center;
+  top: -29vw;
 }
 #life_board {
   transform: scale(0.3);
@@ -136,6 +143,7 @@ img {
   left: 0%;
   top: -90%;
 }
+
 /* Animationer */
 
 .rising {
@@ -161,6 +169,9 @@ img {
   animation-name: brighter1;
   animation-duration: 1.5s;
   animation-fill-mode: forwards;
+}
+.paused {
+  animation-play-state: paused;
 }
 @keyframes rising {
   100% {
@@ -194,7 +205,4 @@ img {
   100% {
     filter: brightness(20);
   }
-}
-.paused {
-  animation-play-state: paused;
 }
