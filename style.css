@@ -5,6 +5,7 @@ body {
   position: relative;
   aspect-ratio: 16/9;
   display: grid;
+  overflow: hidden;
 }
 .hidden {
   visibility: hidden;
@@ -15,7 +16,6 @@ img {
 #game {
   grid-row: 1;
   grid-column: 1;
-  overflow: hidden;
 }
 #start {
   position: absolute;
@@ -50,43 +50,33 @@ img {
   background-size: cover;
 }
 #game_elements {
-  width: 100%;
-  height: 100%;
   position: absolute;
-  /* background-color: rgba(255, 0, 0, 0.25); */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 10%;
+  width: 60%;
+  top: 103%;
+  left: 35%;
 }
 
 /* Spil-elementer */
 #greenButton1_container {
-  position: absolute;
-  top: 100%;
-  left: 35%;
+  grid-area: 1 / 1;
 }
 #greenButton2_container {
-  position: absolute;
-  top: 100%;
-  left: 55%;
+  grid-area: 1 / 3;
 }
 #greenButton3_container {
-  position: absolute;
-  top: 100%;
-  left: 85%;
+  grid-area: 1 / 6;
 }
-
 #redButton1_container {
-  position: absolute;
-  top: 100%;
-  left: 45%;
+  grid-area: 1 / 2;
 }
 #redButton2_container {
-  position: absolute;
-  top: 100%;
-  left: 75%;
+  grid-area: 1 / 4;
 }
 #redButton3_container {
-  position: absolute;
-  top: 100%;
-  left: 65%;
+  grid-area: 1 / 5;
 }
 
 /* ui-elemtenter */

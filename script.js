@@ -31,6 +31,7 @@ function levelComplete() {
 }
 
 function removeAnimations() {
+  //Removes animations and hides game elements and game ui.
   console.log("Removed animations and event listeners");
   document.querySelector("#greenButton1_container").classList.remove("rising");
   document.querySelector("#redButton1_container").classList.remove("rising");
@@ -46,6 +47,7 @@ function removeAnimations() {
   document
     .querySelector("#redButton1_container")
     .removeEventListener("animationend", redButtonReset);
+
   document.querySelector("#game_elements").classList.add("hidden");
   document.querySelector("#game_ui").classList.add("hidden");
 }
