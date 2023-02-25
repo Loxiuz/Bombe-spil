@@ -49,6 +49,17 @@ img {
   position: absolute;
   background-size: cover;
 }
+footer {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  font-size: small;
+  gap: 0%;
+}
+#credit {
+  font-size: small;
+  margin: 0;
+}
 
 /* Spil-elementer */
 
