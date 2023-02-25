@@ -102,7 +102,7 @@ function addPoint() {
   console.log("addPoint");
   points++;
   updatePoints();
-  if (points == 3) {
+  if (points == 10) {
     levelComplete();
   }
 }
