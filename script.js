@@ -46,8 +46,8 @@ function levelComplete() {
   document.querySelector("#level_complete").classList.remove("hidden");
 }
 
+//Removes animations and hides game elements and game ui.
 function removeAnimations() {
-  //Removes animations and hides game elements and game ui.
   console.log("Removed animations and event listeners");
   document.querySelector("#greenButton1_container").classList.remove("rising");
   document.querySelector("#greenButton2_container").classList.remove("rising");
@@ -55,38 +55,42 @@ function removeAnimations() {
   document.querySelector("#redButton1_container").classList.remove("rising");
   document.querySelector("#redButton2_container").classList.remove("rising");
   document.querySelector("#redButton3_container").classList.remove("rising");
+  //---Green button 1---//
   document
     .querySelector("#greenButton1_container")
     .removeEventListener("click", greenButton1Click);
   document
     .querySelector("#greenButton1_container")
     .removeEventListener("animationend", greenButton1Reset);
-  document;
+  //---Green button 2---//
   document
     .querySelector("#greenButton2_container")
     .removeEventListener("click", greenButton2Click);
   document
     .querySelector("#greenButton2_container")
     .removeEventListener("animationend", greenButton2Reset);
-  document;
+  //---Green button 3---//
   document
     .querySelector("#greenButton3_container")
     .removeEventListener("click", greenButton3Click);
   document
     .querySelector("#greenButton3_container")
     .removeEventListener("animationend", greenButton3Reset);
+  //---Red button 1---//
   document
     .querySelector("#redButton1_container")
     .removeEventListener("click", redButton1Click);
   document
     .querySelector("#redButton1_container")
     .removeEventListener("animationend", redButton1Reset);
+  //---Red button 2---//
   document
     .querySelector("#redButton2_container")
     .removeEventListener("click", redButton2Click);
   document
     .querySelector("#redButton2_container")
     .removeEventListener("animationend", redButton2Reset);
+  //---Red button 3---//
   document
     .querySelector("#redButton3_container")
     .removeEventListener("click", redButton3Click);
@@ -125,7 +129,7 @@ function updateIndicators() {
     .querySelector("#indicator_red" + indicatorsOff)
     .classList.add("brighter");
 }
-
+//---Green button 1---//
 function greenButton1Click() {
   console.log("greenbutton1Click");
   document
@@ -149,7 +153,7 @@ function greenButton1Reset() {
     .querySelector("#greenButton1_container")
     .addEventListener("click", greenButton1Click);
 }
-
+//---Green button 2---//
 function greenButton2Click() {
   console.log("greenbutton2Click");
   document
@@ -173,7 +177,7 @@ function greenButton2Reset() {
     .querySelector("#greenButton2_container")
     .addEventListener("click", greenButton2Click);
 }
-
+//---Green button 3---//
 function greenButton3Click() {
   console.log("greenbutton3Click");
   document
@@ -197,7 +201,7 @@ function greenButton3Reset() {
     .querySelector("#greenButton3_container")
     .addEventListener("click", greenButton3Click);
 }
-
+//---Red button 1---//
 function redButton1Click() {
   console.log("redbutton1Click");
   document
@@ -221,6 +225,7 @@ function redButton1Reset() {
     .querySelector("#redButton1_container")
     .addEventListener("click", redButton1Click);
 }
+//---Red button 2---//
 function redButton2Click() {
   console.log("redbutton2Click");
   document
@@ -244,6 +249,7 @@ function redButton2Reset() {
     .querySelector("#redButton2_container")
     .addEventListener("click", redButton2Click);
 }
+//---Red button 3---//
 function redButton3Click() {
   console.log("redbutton3Click");
   document
