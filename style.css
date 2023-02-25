@@ -49,6 +49,9 @@ img {
   position: absolute;
   background-size: cover;
 }
+
+/* Spil-elementer */
+
 #game_elements {
   position: absolute;
   display: grid;
@@ -59,7 +62,6 @@ img {
   left: 35%;
 }
 
-/* Spil-elementer */
 #greenButton1_container {
   grid-area: 1 / 1;
 }
@@ -168,7 +170,7 @@ img {
 }
 @keyframes rising {
   100% {
-    transform: translate(0, -612%);
+    transform: translate(0, -720%);
   }
 }
 @keyframes fade_out {
