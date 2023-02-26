@@ -90,7 +90,7 @@ function updateIndicators() {
 }
 
 function greenButtonClick() {
-  console.log("greenbutton1Click");
+  console.log("greenbuttonClick");
   document
     .querySelector("#greenButton1_container")
     .removeEventListener("click", greenButtonClick);
@@ -102,7 +102,7 @@ function greenButtonClick() {
   addPoint();
 }
 function greenButtonReset() {
-  console.log("greenButton1Reset");
+  console.log("greenButtonReset");
   document.querySelector("#greenButton1_container").classList.remove("paused");
   document.querySelector("#greenButton1_sprite").classList.remove("fade_out");
   document.querySelector("#greenButton1_container").classList.remove("rising");
@@ -114,7 +114,7 @@ function greenButtonReset() {
 }
 
 function redButtonClick() {
-  console.log("redbutton1Click");
+  console.log("redbuttonClick");
   document
     .querySelector("#redButton1_container")
     .removeEventListener("click", redButtonClick);
@@ -126,7 +126,7 @@ function redButtonClick() {
   lightNextIndicator();
 }
 function redButtonReset() {
-  console.log("redButton1Reset");
+  console.log("redButtonReset");
   document.querySelector("#redButton1_container").classList.remove("paused");
   document.querySelector("#redButton1_sprite").classList.remove("fade_out");
   document.querySelector("#redButton1_container").classList.remove("rising");
