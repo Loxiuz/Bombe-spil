@@ -52,7 +52,6 @@ function start() {
 }
 
 function startAnimations() {
-  //Animationer
   document
     .querySelector("#greenButton1_container")
     .classList.add("rise_and_fall");
@@ -73,7 +72,6 @@ function startAnimations() {
     .classList.add("rise_and_fall");
 }
 function startPositions() {
-  //Positioner
   document.querySelector("#greenButton1_container").classList.add("position1");
   document.querySelector("#greenButton2_container").classList.add("position3");
   document.querySelector("#greenButton3_container").classList.add("position6");
@@ -93,7 +91,7 @@ function levelComplete() {
   document.querySelector("#level_complete").classList.remove("hidden");
 }
 
-//Fjerner animationer og skjuler spil-elementer og -ui
+//Fjerner animationer samt skjuler spil-elementer og -ui
 function removeAnimations() {
   console.log("Removed animations and event listeners");
   document
