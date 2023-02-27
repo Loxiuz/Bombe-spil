@@ -200,7 +200,7 @@ footer {
 }
 @keyframes rise_and_fall {
   50% {
-    transform: translate(0, -720%);
+    transform: translate(0, -800%);
   }
   100% {
     transform: translate(0, 0);
