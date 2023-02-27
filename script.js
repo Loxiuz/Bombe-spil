@@ -8,6 +8,7 @@ let points = 0;
 function start() {
   console.log("start");
 
+  startPositions();
   startAnimations();
 
   //Registrering af click
@@ -51,7 +52,7 @@ function start() {
 }
 
 function startAnimations() {
-  //Animation
+  //Animationer
   document
     .querySelector("#greenButton1_container")
     .classList.add("rise_and_fall");
@@ -70,7 +71,8 @@ function startAnimations() {
   document
     .querySelector("#redButton3_container")
     .classList.add("rise_and_fall");
-
+}
+function startPositions() {
   //Positioner
   document.querySelector("#greenButton1_container").classList.add("position1");
   document.querySelector("#greenButton2_container").classList.add("position3");
@@ -91,7 +93,7 @@ function levelComplete() {
   document.querySelector("#level_complete").classList.remove("hidden");
 }
 
-//Removes animations and hides game elements and game ui.
+//Fjerner animationer og skjuler spil-elementer og -ui
 function removeAnimations() {
   console.log("Removed animations and event listeners");
   document
