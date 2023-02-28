@@ -14,6 +14,7 @@ function start() {
 }
 
 function clickEvents() {
+  console.log("Click events");
   //Registrering af click
   document
     .querySelector("#greenButton1_container")
@@ -35,6 +36,7 @@ function clickEvents() {
     .addEventListener("click", redButtonClick);
 }
 function resetAnimations() {
+  console.log("Reset animations");
   //Hvad der skal ske når animationen slutter
   document
     .querySelector("#greenButton1_container")
@@ -57,6 +59,7 @@ function resetAnimations() {
 }
 
 function startAnimations() {
+  console.log("Start animations");
   document
     .querySelector("#greenButton1_container")
     .classList.add("rise_and_fall");
@@ -77,6 +80,7 @@ function startAnimations() {
     .classList.add("rise_and_fall");
 }
 function startPositions() {
+  console.log("Start positions");
   document.querySelector("#greenButton1_container").classList.add("position1");
   document.querySelector("#greenButton2_container").classList.add("position3");
   document.querySelector("#greenButton3_container").classList.add("position6");
