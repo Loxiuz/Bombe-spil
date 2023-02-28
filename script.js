@@ -10,7 +10,7 @@ function start() {
   startPositions();
   startAnimations();
   clickEvents();
-  animationsReset();
+  resetAnimations();
 }
 
 function clickEvents() {
@@ -34,7 +34,7 @@ function clickEvents() {
     .querySelector("#redButton3_container")
     .addEventListener("click", redButtonClick);
 }
-function animationsReset() {
+function resetAnimations() {
   //Hvad der skal ske når animationen slutter
   document
     .querySelector("#greenButton1_container")
