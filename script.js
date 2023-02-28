@@ -7,10 +7,13 @@ let points = 0;
 
 function start() {
   console.log("start");
-
   startPositions();
   startAnimations();
+  clickEvents();
+  animationsReset();
+}
 
+function clickEvents() {
   //Registrering af click
   document
     .querySelector("#greenButton1_container")
@@ -30,6 +33,8 @@ function start() {
   document
     .querySelector("#redButton3_container")
     .addEventListener("click", redButtonClick);
+}
+function animationsReset() {
   //Hvad der skal ske når animationen slutter
   document
     .querySelector("#greenButton1_container")
