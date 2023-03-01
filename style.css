@@ -52,11 +52,12 @@ img {
 footer {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   font-size: small;
   gap: 0%;
 }
-#credit {
+#creditImages,
+#creditSounds {
   font-size: small;
   margin: 0;
 }
