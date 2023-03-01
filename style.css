@@ -246,8 +246,3 @@ footer {
     filter: brightness(8);
   }
 }
-@keyframes brighter2 {
-  100% {
-    filter: brightness(20);
-  }
-}
