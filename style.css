@@ -197,7 +197,7 @@ footer {
 
 .fade_out {
   animation-name: fade_out;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
   animation-fill-mode: forwards;
 }
 .squeeze {
