@@ -209,7 +209,7 @@ footer {
 }
 .brighter {
   animation-name: brighter1;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
 }
 .paused {

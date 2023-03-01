@@ -4,6 +4,7 @@ window.addEventListener("load", start);
 
 let indicatorsOff = 3;
 let points = 0;
+const MAX_POINTS = 3;
 
 function start() {
   console.log("start");
@@ -92,11 +93,20 @@ function startPositions() {
 function gameOver() {
   console.log("Game Over");
   removeAnimations();
+  let audio = document.querySelector("#game_over_sound");
+  audio.currentTime = 0;
+  audio.volume = 0.3;
+  audio.play();
+
   document.querySelector("#game_over").classList.remove("hidden");
 }
 function levelComplete() {
   console.log("Level Complete");
   removeAnimations();
+  let audio = document.querySelector("#level_complete_sound");
+  audio.currentTime = 0;
+  audio.play();
+
   document.querySelector("#level_complete").classList.remove("hidden");
 }
 
@@ -128,8 +138,11 @@ function removeAnimations() {
 
 function greenButtonClick() {
   console.log("greenButtonClick");
-  const button = this;
+  let audio = document.querySelector("#green_button_sound");
+  audio.currentTime = 0;
+  audio.play();
 
+  const button = this;
   button.removeEventListener("click", greenButtonClick);
   button.classList.add("paused");
   button.querySelector("img").classList.add("fade_out");
@@ -151,8 +164,11 @@ function greenButtonGone() {
 
 function redButtonClick() {
   console.log("redbuttonClick");
-  const button = this;
+  let audio = document.querySelector("#red_button_sound");
+  audio.currentTime = 0;
+  audio.play();
 
+  const button = this;
   button.removeEventListener("click", redButtonClick);
   button.classList.add("paused");
   button.querySelector("img").classList.add("fade_out");
@@ -197,7 +213,7 @@ function addPoint() {
   console.log("addPoint");
   points++;
   updatePoints();
-  if (points == 3) {
+  if (points == MAX_POINTS) {
     levelComplete();
   }
 }
