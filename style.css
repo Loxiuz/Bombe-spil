@@ -228,14 +228,6 @@ footer {
     opacity: 0%;
   }
 }
-@keyframes fade_in {
-  0% {
-    opacity: 0%;
-  }
-  100% {
-    opacity: 100%;
-  }
-}
 @keyframes squeeze {
   100% {
     transform: scale(0, 0.3);
