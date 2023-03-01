@@ -102,7 +102,7 @@ function levelComplete() {
 
 //Fjerner animationer samt skjuler spil-elementer og -ui
 function removeAnimations() {
-  console.log("Removed animations and event listeners");
+  console.log("Removed animations");
   document
     .querySelector("#greenButton1_container")
     .classList.remove("rise_and_fall");
@@ -134,7 +134,7 @@ function greenButtonClick() {
   button.classList.add("paused");
   button.querySelector("img").classList.add("fade_out");
   button.addEventListener("animationend", greenButtonGone);
-  addPoint();
+  button.addEventListener("animationend", addPoint);
 }
 function greenButtonGone() {
   console.log("greenButtonGone");
@@ -157,7 +157,7 @@ function redButtonClick() {
   button.classList.add("paused");
   button.querySelector("img").classList.add("fade_out");
   button.addEventListener("animationend", redButtonGone);
-  lightNextIndicator();
+  button.addEventListener("animationend", lightNextIndicator);
 }
 function redButtonGone() {
   console.log("redButtonGone");
