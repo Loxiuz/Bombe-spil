@@ -171,13 +171,30 @@ footer {
 
 /* Animationer */
 
-.rise_and_fall {
+.rise_and_fall1 {
   animation-name: rise_and_fall;
   animation-duration: 5s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
+.rise_and_fall2 {
+  animation-name: rise_and_fall;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 1.5s;
+}
+.rise_and_fall3 {
+  animation-name: rise_and_fall;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 3s;
+}
+
 .fade_out {
   animation-name: fade_out;
   animation-duration: 1s;

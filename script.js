@@ -62,22 +62,22 @@ function startAnimations() {
   console.log("Start animations");
   document
     .querySelector("#greenButton1_container")
-    .classList.add("rise_and_fall");
+    .classList.add("rise_and_fall1");
   document
     .querySelector("#greenButton2_container")
-    .classList.add("rise_and_fall");
+    .classList.add("rise_and_fall2");
   document
     .querySelector("#greenButton3_container")
-    .classList.add("rise_and_fall");
+    .classList.add("rise_and_fall3");
   document
     .querySelector("#redButton1_container")
-    .classList.add("rise_and_fall");
+    .classList.add("rise_and_fall3");
   document
     .querySelector("#redButton2_container")
-    .classList.add("rise_and_fall");
+    .classList.add("rise_and_fall2");
   document
     .querySelector("#redButton3_container")
-    .classList.add("rise_and_fall");
+    .classList.add("rise_and_fall1");
 }
 function startPositions() {
   console.log("Start positions");
@@ -105,22 +105,22 @@ function removeAnimations() {
   console.log("Removed animations");
   document
     .querySelector("#greenButton1_container")
-    .classList.remove("rise_and_fall");
+    .classList.remove("rise_and_fall1", "rise_and_fall2", "rise_and_fall3");
   document
     .querySelector("#greenButton2_container")
-    .classList.remove("rise_and_fall");
+    .classList.remove("rise_and_fall1", "rise_and_fall2", "rise_and_fall3");
   document
     .querySelector("#greenButton3_container")
-    .classList.remove("rise_and_fall");
+    .classList.remove("rise_and_fall1", "rise_and_fall2", "rise_and_fall3");
   document
     .querySelector("#redButton1_container")
-    .classList.remove("rise_and_fall");
+    .classList.remove("rise_and_fall1", "rise_and_fall2", "rise_and_fall3");
   document
     .querySelector("#redButton2_container")
-    .classList.remove("rise_and_fall");
+    .classList.remove("rise_and_fall1", "rise_and_fall2", "rise_and_fall3");
   document
     .querySelector("#redButton3_container")
-    .classList.remove("rise_and_fall");
+    .classList.remove("rise_and_fall1", "rise_and_fall2", "rise_and_fall3");
 
   document.querySelector("#game_elements").classList.add("hidden");
   document.querySelector("#game_ui").classList.add("hidden");
@@ -176,9 +176,9 @@ function buttonReset() {
   console.log("buttonReset");
   const button = this;
 
-  button.classList.remove("rise_and_fall");
+  button.classList.remove("rise_and_fall1", "rise_and_fall2", "rise_and_fall3");
   button.offsetHeight;
-  button.classList.add("rise_and_fall");
+  button.classList.add("rise_and_fall1");
 
   button.classList.remove(
     "position1",
