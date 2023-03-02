@@ -10,6 +10,7 @@ function ready() {
   console.log("Javascript ready");
   showStartScreen();
 }
+
 function startGame() {
   console.log("start");
   showGame();
@@ -219,6 +220,7 @@ function removeClicksEvents() {
     .querySelector("#redButton3_container")
     .removeEventListener("click", redButtonClick);
 }
+
 function hideGame() {
   console.log("Hide game");
   document.querySelector("#game_elements").classList.add("hidden");
@@ -239,6 +241,7 @@ function greenButtonClick() {
   button.querySelector("img").classList.add("fade_out");
   button.addEventListener("animationend", greenButtonGone);
 }
+
 function greenButtonGone() {
   console.log("greenButtonGone");
   const button = this;
@@ -266,6 +269,7 @@ function redButtonClick() {
   button.querySelector("img").classList.add("fade_out");
   button.addEventListener("animationend", redButtonGone);
 }
+
 function redButtonGone() {
   console.log("redButtonGone");
   const button = this;
@@ -308,6 +312,7 @@ function addPoint() {
     levelComplete();
   }
 }
+
 function updatePoints() {
   console.log("updatePoints");
   document.querySelector("#counter").textContent = points;
@@ -322,6 +327,7 @@ function lightNextIndicator() {
     gameOver();
   }
 }
+
 function updateIndicators() {
   console.log("updateIndicators");
   //For at den ikke prøver at indsætte 0 i navnet
