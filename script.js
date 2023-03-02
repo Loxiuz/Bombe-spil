@@ -28,11 +28,11 @@ function startGame() {
   document.querySelector("#game_elements").classList.remove("hidden");
   document.querySelector("#start").classList.add("hidden");
 
-  startTimer();
   startPositions();
   startAnimations();
   clickEvents();
   animationsReset();
+  startTimer();
 }
 
 function startTimer() {
