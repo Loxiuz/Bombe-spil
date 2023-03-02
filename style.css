@@ -16,14 +16,18 @@ img {
 #game {
   grid-area: 1 / 1;
 }
-#start {
+#start,
+#game_over,
+#level_complete {
   position: absolute;
   height: 100%;
   width: 100%;
 }
-#start_title {
-  position: absolute;
-  left: 40%;
+#start_title,
+#game_over_text,
+#level_complete_text {
+  position: relative;
+  text-align: center;
   color: white;
   font-size: 4vw;
 }
@@ -32,7 +36,7 @@ img {
   text-align: center;
   width: 50%;
   left: 40%;
-  top: 50%;
+  top: 40%;
   font-size: larger;
   color: white;
   font-size: 2.5vw;
@@ -41,28 +45,27 @@ img {
   position: absolute;
   font-size: 3vw;
   top: 18%;
-  left: 48%;
+  left: 47%;
 }
-#game_over {
+#restart_button {
   position: absolute;
-  height: 100%;
-  width: 100%;
+  top: 18%;
+  left: 40%;
+  font-size: 3vw;
 }
-#game_over_text {
-  position: relative;
-  text-align: center;
-  top: 10%;
-}
-#level_complete {
+#goToStart_button {
   position: absolute;
-  height: 100%;
-  width: 100%;
+  top: 18%;
+  left: 41%;
+  font-size: 3vw;
 }
-#level_complete_text {
-  position: relative;
-  text-align: center;
-  top: 10%;
-}
+/* {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  font-size: 3vw;
+} */
+
 #game_background {
   width: 100%;
   height: 100%;
@@ -211,7 +214,7 @@ footer {
   animation-direction: alternate;
 }
 .brighter {
-  animation-name: brighter1;
+  animation-name: brighter;
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
@@ -236,7 +239,7 @@ footer {
     transform: scale(0, 0.3);
   }
 }
-@keyframes brighter1 {
+@keyframes brighter {
   100% {
     filter: brightness(8);
   }

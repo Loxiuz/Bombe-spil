@@ -2,25 +2,52 @@
 
 window.addEventListener("load", ready);
 
-let indicatorsOff = 3;
-let points = 0;
+let indicatorsOff;
+let points;
 const MAX_POINTS = 3;
 
 function ready() {
   console.log("Javascript ready");
-  document.querySelector("#game_ui").classList.add("hidden");
-  document.querySelector("#start_button").addEventListener("click", start);
+  showStartScreen();
 }
-
-function start() {
+function startGame() {
   console.log("start");
-  document.querySelector("#start").classList.add("hidden");
+  showGame();
+  resetIndicators();
+  resetPoints();
+
+  document
+    .querySelector("#restart_button")
+    .addEventListener("click", startGame);
+  document
+    .querySelector("#start_button")
+    .removeEventListener("click", startGame);
+
   document.querySelector("#game_ui").classList.remove("hidden");
+  document.querySelector("#game_elements").classList.remove("hidden");
+  document.querySelector("#start").classList.add("hidden");
 
   startPositions();
   startAnimations();
   clickEvents();
-  resetAnimations();
+  animationsReset();
+}
+
+function showStartScreen() {
+  document.querySelector("#game_ui").classList.add("hidden");
+  document.querySelector("#game_elements").classList.add("hidden");
+  document.querySelector("#game_over").classList.add("hidden");
+  document.querySelector("#level_complete").classList.add("hidden");
+  document.querySelector("#start").classList.remove("hidden");
+  document.querySelector("#start_button").addEventListener("click", startGame);
+}
+
+function showGame() {
+  document.querySelector("#game_over").classList.add("hidden");
+  document.querySelector("#level_complete").classList.add("hidden");
+  document.querySelector("#start").classList.add("hidden");
+  document.querySelector("#game_ui").classList.remove("hidden");
+  document.querySelector("#game_elements").classList.remove("hidden");
 }
 
 function clickEvents() {
@@ -45,28 +72,6 @@ function clickEvents() {
     .querySelector("#redButton3_container")
     .addEventListener("click", redButtonClick);
 }
-function resetAnimations() {
-  console.log("Reset animations");
-  //Hvad der skal ske når animationen slutter
-  document
-    .querySelector("#greenButton1_container")
-    .addEventListener("animationiteration", buttonReset);
-  document
-    .querySelector("#greenButton2_container")
-    .addEventListener("animationiteration", buttonReset);
-  document
-    .querySelector("#greenButton3_container")
-    .addEventListener("animationiteration", buttonReset);
-  document
-    .querySelector("#redButton1_container")
-    .addEventListener("animationiteration", buttonReset);
-  document
-    .querySelector("#redButton2_container")
-    .addEventListener("animationiteration", buttonReset);
-  document
-    .querySelector("#redButton3_container")
-    .addEventListener("animationiteration", buttonReset);
-}
 
 function startAnimations() {
   console.log("Start animations");
@@ -89,6 +94,44 @@ function startAnimations() {
     .querySelector("#redButton3_container")
     .classList.add("rise_and_fall1");
 }
+
+function animationsReset() {
+  console.log("Reset animations");
+  //Hvad der skal ske når animationen slutter
+  document
+    .querySelector("#greenButton1_container")
+    .addEventListener("animationiteration", buttonReset);
+  document
+    .querySelector("#greenButton2_container")
+    .addEventListener("animationiteration", buttonReset);
+  document
+    .querySelector("#greenButton3_container")
+    .addEventListener("animationiteration", buttonReset);
+  document
+    .querySelector("#redButton1_container")
+    .addEventListener("animationiteration", buttonReset);
+  document
+    .querySelector("#redButton2_container")
+    .addEventListener("animationiteration", buttonReset);
+  document
+    .querySelector("#redButton3_container")
+    .addEventListener("animationiteration", buttonReset);
+}
+
+function resetIndicators() {
+  console.log("Reset indicators");
+  indicatorsOff = 3;
+  document.querySelector("#indicator_red1").classList.remove("brighter");
+  document.querySelector("#indicator_red2").classList.remove("brighter");
+  document.querySelector("#indicator_red3").classList.remove("brighter");
+}
+
+function resetPoints() {
+  console.log("Reset points");
+  points = 0;
+  updatePoints();
+}
+
 function startPositions() {
   console.log("Start positions");
   document.querySelector("#greenButton1_container").classList.add("position1");
@@ -102,21 +145,34 @@ function startPositions() {
 function gameOver() {
   console.log("Game Over");
   removeAnimations();
+  removeClicksEvents();
+  hideGame();
   let audio = document.querySelector("#game_over_sound");
   audio.currentTime = 0;
   audio.volume = 0.3;
   audio.play();
 
   document.querySelector("#game_over").classList.remove("hidden");
+
+  document
+    .querySelector("#restart_button")
+    .addEventListener("click", startGame);
 }
+
 function levelComplete() {
   console.log("Level Complete");
   removeAnimations();
+  removeClicksEvents();
+  hideGame();
   let audio = document.querySelector("#level_complete_sound");
   audio.currentTime = 0;
   audio.play();
 
   document.querySelector("#level_complete").classList.remove("hidden");
+
+  document
+    .querySelector("#goToStart_button")
+    .addEventListener("click", showStartScreen);
 }
 
 //Fjerner animationer samt skjuler spil-elementer og -ui
@@ -140,7 +196,31 @@ function removeAnimations() {
   document
     .querySelector("#redButton3_container")
     .classList.remove("rise_and_fall1", "rise_and_fall2", "rise_and_fall3");
+}
 
+function removeClicksEvents() {
+  console.log("Removed click events");
+  document
+    .querySelector("#greenButton1_container")
+    .removeEventListener("click", redButtonClick);
+  document
+    .querySelector("#greenButton2_container")
+    .removeEventListener("click", redButtonClick);
+  document
+    .querySelector("#greenButton3_container")
+    .removeEventListener("click", redButtonClick);
+  document
+    .querySelector("#redButton1_container")
+    .removeEventListener("click", redButtonClick);
+  document
+    .querySelector("#redButton2_container")
+    .removeEventListener("click", redButtonClick);
+  document
+    .querySelector("#redButton3_container")
+    .removeEventListener("click", redButtonClick);
+}
+function hideGame() {
+  console.log("Hide game");
   document.querySelector("#game_elements").classList.add("hidden");
   document.querySelector("#game_ui").classList.add("hidden");
 }
@@ -151,12 +231,13 @@ function greenButtonClick() {
   audio.currentTime = 0;
   audio.play();
 
+  addPoint();
+
   const button = this;
   button.removeEventListener("click", greenButtonClick);
   button.classList.add("paused");
   button.querySelector("img").classList.add("fade_out");
   button.addEventListener("animationend", greenButtonGone);
-  button.addEventListener("animationend", addPoint);
 }
 function greenButtonGone() {
   console.log("greenButtonGone");
@@ -177,12 +258,13 @@ function redButtonClick() {
   audio.currentTime = 0;
   audio.play();
 
+  lightNextIndicator();
+
   const button = this;
   button.removeEventListener("click", redButtonClick);
   button.classList.add("paused");
   button.querySelector("img").classList.add("fade_out");
   button.addEventListener("animationend", redButtonGone);
-  button.addEventListener("animationend", lightNextIndicator);
 }
 function redButtonGone() {
   console.log("redButtonGone");
