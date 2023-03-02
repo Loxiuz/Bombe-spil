@@ -4,7 +4,7 @@ window.addEventListener("load", ready);
 
 let indicatorsOff;
 let points;
-const MAX_POINTS = 3;
+const MAX_POINTS = 10;
 
 function ready() {
   console.log("Javascript ready");
@@ -28,10 +28,19 @@ function startGame() {
   document.querySelector("#game_elements").classList.remove("hidden");
   document.querySelector("#start").classList.add("hidden");
 
+  startTimer();
   startPositions();
   startAnimations();
   clickEvents();
   animationsReset();
+}
+
+function startTimer() {
+  console.log("Time started");
+  document.querySelector("#time_slider").classList.add("squeeze");
+  document
+    .querySelector("#time_slider")
+    .addEventListener("animationend", gameOver);
 }
 
 function showStartScreen() {
@@ -197,6 +206,8 @@ function removeAnimations() {
   document
     .querySelector("#redButton3_container")
     .classList.remove("rise_and_fall1", "rise_and_fall2", "rise_and_fall3");
+
+  document.querySelector("#time_slider").classList.remove("squeeze");
 }
 
 function removeClicksEvents() {

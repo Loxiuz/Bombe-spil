@@ -167,7 +167,7 @@ footer {
   top: 5%;
   left: -20%;
 }
-#slider {
+#time_slider {
   transform: scale(0.93, 0.3);
   filter: brightness(1.5);
   position: absolute;
@@ -208,10 +208,8 @@ footer {
 }
 .squeeze {
   animation-name: squeeze;
-  animation-duration: 3s;
+  animation-duration: 12s;
   animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
 }
 .brighter {
   animation-name: brighter;
