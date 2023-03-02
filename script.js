@@ -1,13 +1,22 @@
 "use strict";
 
-window.addEventListener("load", start);
+window.addEventListener("load", ready);
 
 let indicatorsOff = 3;
 let points = 0;
 const MAX_POINTS = 3;
 
+function ready() {
+  console.log("Javascript ready");
+  document.querySelector("#game_ui").classList.add("hidden");
+  document.querySelector("#start_button").addEventListener("click", start);
+}
+
 function start() {
   console.log("start");
+  document.querySelector("#start").classList.add("hidden");
+  document.querySelector("#game_ui").classList.remove("hidden");
+
   startPositions();
   startAnimations();
   clickEvents();

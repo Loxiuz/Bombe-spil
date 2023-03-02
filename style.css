@@ -14,13 +14,34 @@ img {
   width: 100%;
 }
 #game {
-  grid-row: 1;
-  grid-column: 1;
+  grid-area: 1 / 1;
 }
 #start {
   position: absolute;
-  grid-row: 1;
-  grid-column: 1;
+  height: 100%;
+  width: 100%;
+}
+#start_title {
+  position: absolute;
+  left: 40%;
+  color: white;
+  font-size: 4vw;
+}
+#description {
+  position: relative;
+  text-align: center;
+  width: 50%;
+  left: 40%;
+  top: 50%;
+  font-size: larger;
+  color: white;
+  font-size: 2.5vw;
+}
+#start_button {
+  position: absolute;
+  font-size: 3vw;
+  top: 18%;
+  left: 48%;
 }
 #game_over {
   position: absolute;
@@ -53,12 +74,12 @@ footer {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  font-size: small;
+  font-size: 1vw;
   gap: 0%;
 }
 #creditImages,
 #creditSounds {
-  font-size: small;
+  font-size: 1vw;
   margin: 0;
 }
 
