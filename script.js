@@ -19,14 +19,10 @@ function startGame() {
 
   document
     .querySelector("#restart_button")
-    .addEventListener("click", startGame);
+    .removeEventListener("click", startGame);
   document
     .querySelector("#start_button")
     .removeEventListener("click", startGame);
-
-  document.querySelector("#game_ui").classList.remove("hidden");
-  document.querySelector("#game_elements").classList.remove("hidden");
-  document.querySelector("#start").classList.add("hidden");
 
   startPositions();
   startAnimations();
@@ -155,7 +151,7 @@ function startPositions() {
 function gameOver() {
   console.log("Game Over");
   removeAnimations();
-  removeClicksEvents();
+  removeEvents();
   hideGame();
   let audio = document.querySelector("#game_over_sound");
   audio.currentTime = 0;
@@ -172,7 +168,7 @@ function gameOver() {
 function levelComplete() {
   console.log("Level Complete");
   removeAnimations();
-  removeClicksEvents();
+  removeEvents();
   hideGame();
   let audio = document.querySelector("#level_complete_sound");
   audio.currentTime = 0;
@@ -210,7 +206,7 @@ function removeAnimations() {
   document.querySelector("#time_slider").classList.remove("squeeze");
 }
 
-function removeClicksEvents() {
+function removeEvents() {
   console.log("Removed click events");
   document
     .querySelector("#greenButton1_container")
@@ -230,6 +226,9 @@ function removeClicksEvents() {
   document
     .querySelector("#redButton3_container")
     .removeEventListener("click", redButtonClick);
+  document
+    .querySelector("#time_slider")
+    .addEventListener("animationend", gameOver);
 }
 
 function hideGame() {
