@@ -39,7 +39,17 @@ function startTimer() {
     .addEventListener("animationend", gameOver);
 }
 
+function transitionAnimation() {
+  console.log("removeTransition");
+  document.querySelector("#screen").classList.add("fade_in");
+  document.querySelector("#screen").addEventListener("animationend", () => {
+    document.querySelector("#screen").classList.remove("fade_in");
+  });
+}
+
 function showStartScreen() {
+  console.log("showStartScreen");
+  transitionAnimation();
   document.querySelector("#game_ui").classList.add("hidden");
   document.querySelector("#game_elements").classList.add("hidden");
   document.querySelector("#game_over").classList.add("hidden");
@@ -49,6 +59,8 @@ function showStartScreen() {
 }
 
 function showGame() {
+  console.log("Showing game");
+  transitionAnimation();
   document.querySelector("#game_over").classList.add("hidden");
   document.querySelector("#level_complete").classList.add("hidden");
   document.querySelector("#start").classList.add("hidden");
@@ -150,6 +162,7 @@ function startPositions() {
 
 function gameOver() {
   console.log("Game Over");
+  transitionAnimation();
   removeAnimations();
   removeEvents();
   hideGame();
@@ -167,6 +180,7 @@ function gameOver() {
 
 function levelComplete() {
   console.log("Level Complete");
+  transitionAnimation();
   removeAnimations();
   removeEvents();
   hideGame();

@@ -1,4 +1,5 @@
 body {
+  background-color: black;
   margin: 0;
 }
 #screen {
@@ -206,6 +207,11 @@ footer {
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
 }
+.fade_in {
+  animation-name: fade_in;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
 .squeeze {
   animation-name: squeeze;
   animation-duration: 12s;
@@ -230,6 +236,14 @@ footer {
 @keyframes fade_out {
   100% {
     opacity: 0%;
+  }
+}
+@keyframes fade_in {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
   }
 }
 @keyframes squeeze {
