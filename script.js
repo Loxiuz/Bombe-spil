@@ -54,6 +54,9 @@ function transitionAnimation() {
 function showStartScreen() {
   console.log("showStartScreen");
   transitionAnimation();
+  document
+    .querySelector("#goToStart_button")
+    .removeEventListener("click", showStartScreen);
   document.querySelector("#game_ui").classList.add("hidden");
   document.querySelector("#game_elements").classList.add("hidden");
   document.querySelector("#game_over").classList.add("hidden");
