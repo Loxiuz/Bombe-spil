@@ -40,7 +40,7 @@ function startTimer() {
 }
 
 function transitionAnimation() {
-  console.log("removeTransition");
+  console.log("transitionAnimation");
   document.querySelector("#screen").classList.add("fade_in");
   document.querySelector("#screen").addEventListener("animationend", () => {
     document.querySelector("#screen").classList.remove("fade_in");
