@@ -214,7 +214,7 @@ footer {
 }
 .squeeze {
   animation-name: squeeze;
-  animation-duration: 12s;
+  animation-duration: 20s;
   animation-timing-function: linear;
 }
 .brighter {

@@ -4,7 +4,7 @@ window.addEventListener("load", ready);
 
 let indicatorsOff;
 let points;
-const MAX_POINTS = 10;
+const MAX_POINTS = 25;
 
 function ready() {
   console.log("Javascript ready");
@@ -14,6 +14,10 @@ function ready() {
 function startGame() {
   console.log("start");
   showGame();
+  let audio = document.querySelector("#background_music");
+  audio.currentTime = 0;
+  audio.play();
+  audio.volume = 0.3;
   resetIndicators();
   resetPoints();
 
@@ -166,6 +170,7 @@ function gameOver() {
   removeAnimations();
   removeEvents();
   hideGame();
+  document.querySelector("#background_music").pause();
   let audio = document.querySelector("#game_over_sound");
   audio.currentTime = 0;
   audio.volume = 0.3;
@@ -184,6 +189,7 @@ function levelComplete() {
   removeAnimations();
   removeEvents();
   hideGame();
+  document.querySelector("#background_music").pause();
   let audio = document.querySelector("#level_complete_sound");
   audio.currentTime = 0;
   audio.play();
