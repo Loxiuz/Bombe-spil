@@ -14,6 +14,7 @@ function ready() {
 function startGame() {
   console.log("start");
   showGame();
+
   let audio = document.querySelector("#background_music");
   audio.currentTime = 0;
   audio.play();
@@ -45,6 +46,9 @@ function startTimer() {
 
 function transitionAnimation() {
   console.log("transitionAnimation");
+  let btnSound = document.querySelector("#screen_button_sound");
+  btnSound.currentTime = 0.18;
+  btnSound.play();
   document.querySelector("#screen").classList.add("fade_in");
   document.querySelector("#screen").addEventListener("animationend", () => {
     document.querySelector("#screen").classList.remove("fade_in");
@@ -53,7 +57,6 @@ function transitionAnimation() {
 
 function showStartScreen() {
   console.log("showStartScreen");
-  transitionAnimation();
   document
     .querySelector("#goToStart_button")
     .removeEventListener("click", showStartScreen);
@@ -202,6 +205,9 @@ function levelComplete() {
   document
     .querySelector("#goToStart_button")
     .addEventListener("click", showStartScreen);
+  document.querySelector("#goToStart_button").addEventListener("click", () => {
+    transitionAnimation();
+  });
 }
 
 //Fjerner animationer samt skjuler spil-elementer og -ui
