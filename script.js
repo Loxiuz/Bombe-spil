@@ -4,7 +4,7 @@ window.addEventListener("load", ready);
 
 let indicatorsOff;
 let points;
-const MAX_POINTS = 25;
+const MAX_POINTS = 20;
 
 function ready() {
   console.log("Javascript ready");
@@ -14,7 +14,6 @@ function ready() {
 function startGame() {
   console.log("start");
   showGame();
-
   let audio = document.querySelector("#background_music");
   audio.currentTime = 0;
   audio.play();
@@ -270,6 +269,7 @@ function greenButtonClick() {
   console.log("greenButtonClick");
   let audio = document.querySelector("#green_button_sound");
   audio.currentTime = 0;
+  audio.volume = 0.8;
   audio.play();
 
   addPoint();
