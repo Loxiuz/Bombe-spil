@@ -60,12 +60,6 @@ img {
   left: 41%;
   font-size: 3vw;
 }
-/* {
-  position: absolute;
-  top: 50%;
-  left: 45%;
-  font-size: 3vw;
-} */
 
 #game_background {
   width: 100%;
@@ -79,6 +73,7 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   font-size: 1vw;
+  color: white;
   gap: 0%;
 }
 #creditImages,
