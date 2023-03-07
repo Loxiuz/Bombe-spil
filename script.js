@@ -298,6 +298,7 @@ function redButtonClick() {
   console.log("redbuttonClick");
   let audio = document.querySelector("#red_button_sound");
   audio.currentTime = 0;
+  audio.volume = 0.8;
   audio.play();
 
   lightNextIndicator();
