@@ -4,7 +4,7 @@ window.addEventListener("load", ready);
 
 let indicatorsOff;
 let points;
-const MAX_POINTS = 15;
+const MAX_POINTS = 20;
 
 function ready() {
   console.log("Javascript ready");
