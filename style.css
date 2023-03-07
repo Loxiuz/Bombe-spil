@@ -92,6 +92,7 @@ footer {
   width: 60%;
   top: 110%;
   left: 35%;
+  user-select: none;
 }
 
 /* Positioner */
@@ -175,26 +176,26 @@ footer {
 
 .rise_and_fall1 {
   animation-name: rise_and_fall;
-  animation-duration: 5s;
+  animation-duration: 3s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
 .rise_and_fall2 {
   animation-name: rise_and_fall;
-  animation-duration: 5s;
+  animation-duration: 3s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  animation-delay: 1.5s;
+  animation-delay: 1s;
 }
 .rise_and_fall3 {
   animation-name: rise_and_fall;
-  animation-duration: 5s;
+  animation-duration: 3s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  animation-delay: 3s;
+  animation-delay: 2s;
 }
 
 .fade_out {

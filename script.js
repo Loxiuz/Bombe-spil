@@ -4,7 +4,7 @@ window.addEventListener("load", ready);
 
 let indicatorsOff;
 let points;
-const MAX_POINTS = 20;
+const MAX_POINTS = 15;
 
 function ready() {
   console.log("Javascript ready");
@@ -82,22 +82,22 @@ function clickEvents() {
   //Registrering af click
   document
     .querySelector("#greenButton1_container")
-    .addEventListener("click", greenButtonClick);
+    .addEventListener("mousedown", greenButtonClick);
   document
     .querySelector("#greenButton2_container")
-    .addEventListener("click", greenButtonClick);
+    .addEventListener("mousedown", greenButtonClick);
   document
     .querySelector("#greenButton3_container")
-    .addEventListener("click", greenButtonClick);
+    .addEventListener("mousedown", greenButtonClick);
   document
     .querySelector("#redButton1_container")
-    .addEventListener("click", redButtonClick);
+    .addEventListener("mousedown", redButtonClick);
   document
     .querySelector("#redButton2_container")
-    .addEventListener("click", redButtonClick);
+    .addEventListener("mousedown", redButtonClick);
   document
     .querySelector("#redButton3_container")
-    .addEventListener("click", redButtonClick);
+    .addEventListener("mousedown", redButtonClick);
 }
 
 function startAnimations() {
@@ -275,7 +275,7 @@ function greenButtonClick() {
   addPoint();
 
   const button = this;
-  button.removeEventListener("click", greenButtonClick);
+  button.removeEventListener("mousedown", greenButtonClick);
   button.classList.add("paused");
   button.querySelector("img").classList.add("fade_out");
   button.addEventListener("animationend", greenButtonGone);
@@ -291,7 +291,7 @@ function greenButtonGone() {
 
   buttonReset.call(this);
 
-  button.addEventListener("click", greenButtonClick);
+  button.addEventListener("mousedown", greenButtonClick);
 }
 
 function redButtonClick() {
@@ -303,7 +303,7 @@ function redButtonClick() {
   lightNextIndicator();
 
   const button = this;
-  button.removeEventListener("click", redButtonClick);
+  button.removeEventListener("mousedown", redButtonClick);
   button.classList.add("paused");
   button.querySelector("img").classList.add("fade_out");
   button.addEventListener("animationend", redButtonGone);
@@ -319,7 +319,7 @@ function redButtonGone() {
 
   buttonReset.call(this);
 
-  button.addEventListener("click", redButtonClick);
+  button.addEventListener("mousedown", redButtonClick);
 }
 
 function buttonReset() {
